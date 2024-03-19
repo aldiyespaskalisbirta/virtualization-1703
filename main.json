@@ -36,5 +36,16 @@
         "Password": "db17032002"
       }
     }
+  },
+  "setting-ip-address": {
+    "refresh-repository": "jalankan perintah 'sudo apt update'",
+    "setup-ip-address-pada-netplan": [
+      "masuk kedalam configurasi netplan dengan perintah 'sudo nano /etc/netplan/00-installer-config.yaml",
+      "massukan konfigurasi untuk VM dan setting ip-address=[10.0.2.17/24]",
+      "setelah selesai konfigurasi, simpan perubahan dengan klik 'ctrl+x' -> 'y' -> 'enter'",
+      "jalankan perintah 'sudo netplan apply'",
+      "jika terdapat 'error: Cannot call Open vSwitch: ovsdb-server.service  is not running'",
+      "restart ubuntu dengan perintah 'sudo reboot'"
+    ]
   }
 }
