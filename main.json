@@ -55,5 +55,47 @@
     "masukkan name_machine dengan nama 'demo-webserver'",
     "klik 'next' lalu pilih 'full clone'",
     "kemudian klik finish"
-  ]
+  ],
+  "setup-pada-vm-demo-webserver-": {
+    "refresh-repository": "jalankan perintah 'sudo apt update'",
+    "setup-ip-address-pada-netplan": [
+      "masuk kedalam configurasi netplan dengan perintah 'sudo nano /etc/netplan/00-installer-config.yaml",
+      "massukan konfigurasi untuk VM dan setting ip-address=[10.0.2.11/24]",
+      "setelah selesai konfigurasi, simpan perubahan dengan klik 'ctrl+x' -> 'y' -> 'enter'",
+      "jalankan perintah 'sudo netplan apply'",
+      "jika terdapat 'error: Cannot call Open vSwitch: ovsdb-server.service  is not running'",
+      "restart ubuntu dengan perintah 'sudo reboot'"
+    ],
+    "mengganti-hostname-pada-vm-demo-webserver": [
+      "jalankan perintah 'sudo hostnamectl set-hostname webserver1703'",
+      "jalankan perintah 'hostname' untuk memastikan hostname sudah tergantikan"
+    ],
+    "mengganti-password-pada-root-vm-demo-webserver": [
+      "masuk kedalam root dengan cara 'sudo su'",
+      "jalankan perintah 'passwd'",
+      "masukkan password baru 'ws17032002'"
+    ],
+    "mengganti-servername-pada-vm-demo-webserver": [
+      "jalankan perintah 'sudo nano /etc/hosts'",
+      "pada baris kedua, ubah nama server dari 'db1703' menjadi 'webserver1703.localdomain webserver1703'",
+      "simpan perubahan dengan cara 'ctrl+x' kemudian 'y'",
+      "restart ubuntu dengan perintah 'sudo reboot'"
+    ],
+    "login-dengan-root-user": ["username: root", "password: ws17032002"],
+    "mengganti-username": [
+      "jalankan perintah 'usermod -l webserver -d /home/db -m db",
+      "group mod dengan menjalankan perintah 'groupmod -n webserver db'",
+      "restart ubuntu dengan perintah 'reboot'"
+    ],
+    "masuk-ke-hostname-webserver": [
+      "username: webserver",
+      "password: db17032002"
+    ],
+    "ganti-password-pada-user": [
+      "masukkan perintah passwd",
+      "masukkan password lama 'db170320202'",
+      "masukkan password baru 'ws17032002'",
+      "restart ubuntu dengan perintah 'sudo reboot'"
+    ]
+  }
 }
