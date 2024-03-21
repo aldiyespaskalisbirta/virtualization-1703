@@ -47,5 +47,13 @@
       "jika terdapat 'error: Cannot call Open vSwitch: ovsdb-server.service  is not running'",
       "restart ubuntu dengan perintah 'sudo reboot'"
     ]
-  }
+  },
+  "clone-virtual-machine": [
+    "buka virtualbox",
+    "klik pada VM demo-db yang telah dibuat",
+    "klik kanan lalu pilih clone (ctrl + o)",
+    "masukkan name_machine dengan nama 'demo-webserver'",
+    "klik 'next' lalu pilih 'full clone'",
+    "kemudian klik finish"
+  ]
 }
